@@ -19,17 +19,12 @@ export default function RootLayout({ children }) {
         }}
         className="flex flex-col min-h-screen"
       >
-        {/* Global Navbar */}
         <div className="sticky top-0 z-30">
           <Navbar />
         </div>
-
-        {/* Page content */}
         <main className="flex-grow">{children}</main>
-
-        {/* Global Footer */}
         <div
-          className="sticky bottom-0 shadow-inner"
+          className="bottom-0 shadow-inner"
           style={{
             backgroundColor: theme.colors.footerBg,
             borderTop: `1px solid ${theme.colors.footerBorder}`,

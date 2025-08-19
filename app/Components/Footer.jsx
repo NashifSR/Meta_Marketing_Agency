@@ -1,37 +1,48 @@
-'use client';
 import React from 'react';
 import Link from 'next/link';
-import theme from '../../theme'; // adjust path if needed
 
 const Footer = () => {
   return (
-    <footer
-      className="py-6 mt-10 shadow-inner border-t"
-      style={{
-        backgroundColor: theme.colors.background,
-        color: theme.colors.primaryText,
-        borderColor: theme.colors.primaryHoverBg,
-      }}
-    >
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-        <p className="text-center md:text-left">
-          © {new Date().getFullYear()} Student Portal. All rights reserved.
-        </p>
+    <footer className="bg-gray-900 text-gray-300 py-12">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        <div className="flex gap-6 font-semibold">
-          {["privacy", "terms", "contact"].map((page) => (
-            <Link
-              key={page}
-              href={`/${page}`}
-              style={{ color: theme.colors.primaryText }}
-              onMouseEnter={(e) => (e.target.style.color = theme.colors.primaryHoverBg)}
-              onMouseLeave={(e) => (e.target.style.color = theme.colors.primaryText)}
-              className="hover:underline"
-            >
-              {page.charAt(0).toUpperCase() + page.slice(1)}
-            </Link>
-          ))}
+        {/* About Section */}
+        <div>
+          <h3 className="text-xl font-bold text-white mb-4">MetaAgency</h3>
+          <p className="text-gray-400">
+            We help brands grow with high-performing Meta ad campaigns and creative marketing strategies.
+          </p>
         </div>
+
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
+          <ul className="space-y-2">
+            {["Home", "Services", "Case Studies", "About", "Contact"].map((link) => (
+              <li key={link}>
+                <Link
+                  href={`/${link.toLowerCase().replace(" ", "-")}`}
+                  className="hover:text-white transition"
+                >
+                  {link}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Contact Info */}
+        <div>
+          <h3 className="text-xl font-bold text-white mb-4">Contact</h3>
+          <p>Email: <a href="mailto:hello@metaagency.com" className="hover:text-white transition">hello@metaagency.com</a></p>
+          <p>Phone: <a href="tel:+1234567890" className="hover:text-white transition">+1 234 567 890</a></p>
+          <p>Address: 123 Marketing St, Meta City</p>
+        </div>
+
+      </div>
+
+      <div className="mt-10 text-center border-t border-gray-700 pt-6 text-gray-500 text-sm">
+        © {new Date().getFullYear()} MetaAgency. All rights reserved.
       </div>
     </footer>
   );
