@@ -1,30 +1,58 @@
-// app/page.jsx
-import Link from 'next/link';
-import theme from '../theme'; // adjust if needed
-import HeroSection from './Components/HomeComponents/HeroSection';
-import Services from './Components/HomeComponents/Services';
-import Pricing from './Components/HomeComponents/Pricing';
-import CaseStudies from './Components/HomeComponents/CaseStudies';
-import WorkProcess from './Components/HomeComponents/WorkProcess';
-import Testimonials from './Components/HomeComponents/Testimonials';
-import Team from './Components/HomeComponents/Team';
-import FAQ from './Components/HomeComponents/FAQ';
-import CTA from './Components/HomeComponents/CTA';
+import About from "./Components/About";
+import CTA from "./Components/CTA";
+import Hero from "./Components/Hero";
+import Portfolio from "./Components/Portfolio";
+import Services from "./Components/Services";
+import WhyChooseUs from "./Components/WhyChooseUs";
 
-const Home = () => {
+export default function FrameHouseCreative() {
   return (
-    <main className="flex flex-col items-center justify-center px-2 py-2 mx-auto">
-      <HeroSection></HeroSection>
-      <Services></Services>
-      <WorkProcess></WorkProcess>
-      <CaseStudies></CaseStudies>
-      <Testimonials></Testimonials>
-      <Team></Team>
-      <Pricing></Pricing>
-      <FAQ></FAQ>
-      <CTA></CTA>
-    </main>
-  );
-};
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      <main className="relative z-10">
 
-export default Home;
+        {/* HERO */}
+        <section className="min-h-screen flex items-center py-20">
+          <div className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+            <Hero />
+          </div>
+        </section>
+
+        {/* SERVICES */}
+        <section className="py-20 md:py-28">
+          <div className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+            <Services />
+          </div>
+        </section>
+
+        {/* PORTFOLIO */}
+        <section className="py-20 md:py-28">
+          <div className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+            <Portfolio />
+          </div>
+        </section>
+
+        {/* WHY CHOOSE US */}
+        <section className="py-20 md:py-28">
+          <div className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+            <WhyChooseUs />
+          </div>
+        </section>
+
+        {/* ABOUT */}
+        <section className="py-20 md:py-28">
+          <div className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+            <About />
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-20 md:py-28">
+          <div className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+            <CTA />
+          </div>
+        </section>
+
+      </main>
+    </div>
+  );
+}
