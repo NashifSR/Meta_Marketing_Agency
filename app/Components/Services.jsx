@@ -32,42 +32,35 @@ const Services = () => {
 
       {/* Header */}
       <div className="text-center">
-
         <p className="text-white/40 uppercase tracking-[0.3em] text-xs mb-3">
           Services
         </p>
-
         <h3 className="text-3xl md:text-4xl font-semibold text-white/90">
           Creative solutions for modern brands
         </h3>
-
       </div>
 
       {/* Grid */}
       <div className="grid md:grid-cols-2 gap-6 mt-10">
-
         {services.map((service, index) => (
           <div
-            key={index}
+            key={`service-${index}`}
             className="group rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:bg-white/10 transition duration-300"
           >
-
-            {/* Icon */}
+            {/* Icon Placement */}
             <div className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 mb-5 group-hover:bg-white/10 transition" />
 
             {/* Title */}
             <h4 className="text-lg md:text-xl font-medium text-white/90 mb-2">
-              {service.title}
+              {service.title === "Web Design & Dev" ? "Web Design &amp; Dev" : service.title}
             </h4>
 
             {/* Description */}
             <p className="text-sm md:text-base text-white/50 leading-relaxed">
               {service.description}
             </p>
-
           </div>
         ))}
-
       </div>
 
     </section>

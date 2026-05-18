@@ -2,16 +2,17 @@ import React from "react";
 
 const Hero = () => {
     return (
-        <section id="home"
+        <section 
+            id="home"
             className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center scroll-mt-24 md:scroll-mt-28 lg:scroll-mt-32"
         >
 
-            {/* LEFT */}
+            {/* LEFT SIDE */}
             <div>
 
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-lg text-xs text-white/60 mb-6">
-                    Creative Agency • Design • Editing • Web
+                    Creative Agency {"\u2022"} Design {"\u2022"} Editing {"\u2022"} Web
                 </div>
 
                 {/* Heading */}
@@ -43,8 +44,7 @@ const Hero = () => {
 
             </div>
 
-            {/* RIGHT */}
-            {/* RIGHT */}
+            {/* RIGHT SIDE */}
             <div className="relative">
 
                 <div className="rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-2xl p-6">
@@ -64,7 +64,7 @@ const Hero = () => {
                             Creative That Converts
                         </h3>
                         <p className="text-white/50 text-sm mt-1">
-                            Design • Branding • Web Experience
+                            Design {"\u2022"} Branding {"\u2022"} Web Experience
                         </p>
                     </div>
 

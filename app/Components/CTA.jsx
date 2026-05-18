@@ -20,7 +20,7 @@ const CTA = () => {
 
           {/* Label */}
           <p className="text-white/40 uppercase tracking-[0.3em] text-xs mb-4">
-            Let’s work together
+            Let{"'"}s work together
           </p>
 
           {/* Heading */}
@@ -30,7 +30,7 @@ const CTA = () => {
 
           {/* Description */}
           <p className="mt-5 text-white/50 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            Contact Frame House Creative and let’s create something modern,
+            Contact Frame House Creative and let{"'"}s create something modern,
             clean, and impactful for your brand.
           </p>
 
