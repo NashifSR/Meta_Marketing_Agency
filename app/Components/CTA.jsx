@@ -39,7 +39,7 @@ const CTA = () => {
 
             {/* Email */}
             <a
-              href="mailto:framehousecreative@gmail.com"
+              href="mailto:framehousec@gmail.com"
               className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-black font-medium hover:scale-105 transition"
             >
               <FaEnvelope />
